@@ -52,9 +52,9 @@
                             <td style="text-align: center">{{$user->address}}</td>
                             <td style="text-align: center">{{$user->telephone}}</td>
                             <td>
-                                <a class="btn btn-sm btn-primary" href="">編輯</a>
+                                <a class="btn btn-sm btn-primary" href="{{ route('admin.members.edit', $user->id) }}">編輯</a>
                                 /
-                                <form action="" method="POST" style="display:inline">
+                                <form action="/admin/members/{{$user->id}}" method="POST" style="display:inline">
                                     @method('DELETE')
                                     @csrf
                                     <button class="btn btn-sm btn-danger" type="submit" onclick="return confirm('是否確認刪除')">刪除</button>

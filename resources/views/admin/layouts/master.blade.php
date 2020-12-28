@@ -12,16 +12,16 @@
     <title>@yield('title') | 管理後台</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/admincss/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="{{ asset('css/sb-admin.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/admincss/sb-admin.css') }}" rel="stylesheet">
 
     <!-- Morris Charts CSS -->
-    <link href="{{ asset('css/plugins/morris.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/admincss/plugins/morris.css') }}" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('css/admincss/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -54,15 +54,15 @@
 <!-- /#wrapper -->
 
 <!-- jQuery -->
-<script src="{{ asset('js/jquery.js') }}"></script>
+<script src="{{ asset('js/adminjs/jquery.js') }}"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="{{ asset('js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('js/adminjs/bootstrap.min.js') }}"></script>
 
 <!-- Morris Charts JavaScript -->
-<script src="{{ asset('js/plugins/morris/raphael.min.js') }}"></script>
-<script src="{{ asset('js/plugins/morris/morris.min.js') }}"></script>
-<script src="{{ asset('js/plugins/morris/morris-data.js') }}"></script>
+<script src="{{ asset('js/adminjs/plugins/morris/raphael.min.js') }}"></script>
+<script src="{{ asset('js/adminjs/plugins/morris/morris.min.js') }}"></script>
+<script src="{{ asset('js/adminjs/plugins/morris/morris-data.js') }}"></script>
 
 </body>
 
