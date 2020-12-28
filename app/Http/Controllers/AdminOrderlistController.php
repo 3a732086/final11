@@ -31,4 +31,10 @@ class AdminOrderlistController extends Controller
         $Orderlist->update($request->all());
         return redirect()->route('admin.orderlists.index');
     }
+
+    public function destroy($id)
+    {
+        Orderlist::destroy($id);
+        return redirect()->route('admin.orderlists.index');
+    }
 }
