@@ -51,7 +51,7 @@
                             <td style="text-align: center">{{$menu->price}}</td>
                             <td style="text-align: center">{{$menu->type}}</td>
                             <td>
-                                <a class="btn btn-sm btn-primary" href="">編輯</a>
+                                <a class="btn btn-sm btn-primary" href="{{ route('admin.menus.edit', $menu->id) }}">編輯</a>
 
                                 <form action="" method="POST" style="display:inline">
                                     @method('DELETE')

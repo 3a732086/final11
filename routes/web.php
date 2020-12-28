@@ -35,4 +35,6 @@ Route::prefix('admin')->group(function (){
     Route::get('menus', [AdminMenuController::class, 'index'])->name('admin.menus.index');                          //餐點管理
     Route::get('menus/create', [AdminMenuController::class, 'create'])->name('admin.menus.create');
     Route::post('menus/store',[AdminMenuController::class, 'store'])->name('admin.menus.store');
+    Route::get('menus/{id}/edit', [AdminMenuController::class, 'edit'])->name('admin.menus.edit');
+    Route::patch('menus/{id}',[AdminMenuController::class, 'update'])->name('admin.menus.update');
 });

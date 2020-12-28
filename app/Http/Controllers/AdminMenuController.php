@@ -27,4 +27,19 @@ class AdminMenuController extends Controller
         Product::create($request->all());
         return redirect()->route('admin.menus.index');
     }
+
+    public function edit($id)
+    {
+        $product = Product::find($id);
+        $data = ['product' => $product];
+
+        return view('admin.menus.edit', $data);
+    }
+
+    public function update(Request $request, $id)
+    {
+        $products = Product::find($id);
+        $products->update($request->all());
+        return redirect()->route('admin.menus.index');
+    }
 }
