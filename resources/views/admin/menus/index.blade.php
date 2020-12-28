@@ -53,7 +53,7 @@
                             <td>
                                 <a class="btn btn-sm btn-primary" href="{{ route('admin.menus.edit', $menu->id) }}">編輯</a>
 
-                                <form action="" method="POST" style="display:inline">
+                                <form action="/admin/menus/{{$menu->id}}" method="POST" style="display:inline">
                                     @method('DELETE')
                                     @csrf
                                     <button class="btn btn-sm btn-danger" type="submit" onclick="return confirm('是否確認刪除')">刪除</button>

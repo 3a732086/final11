@@ -42,4 +42,10 @@ class AdminMenuController extends Controller
         $products->update($request->all());
         return redirect()->route('admin.menus.index');
     }
+
+    public function destroy($id)
+    {
+        Product::destroy($id);
+        return redirect()->route('admin.menus.index');
+    }
 }
