@@ -16,4 +16,19 @@ class AdminOrderlistController extends Controller
         ];
         return view('admin.orderlists.index',$data);
     }
+
+    public function edit($id)
+    {
+        $orderlist = Orderlist::find($id);
+        $data = ['orderlist' =>  $orderlist];
+
+        return view('admin.orderlists.edit', $data);
+    }
+
+    public function update(Request $request, $id)
+    {
+        $Orderlist = Orderlist::find($id);
+        $Orderlist->update($request->all());
+        return redirect()->route('admin.orderlists.index');
+    }
 }

@@ -49,7 +49,7 @@
                             <td style="text-align: center">{{$orderlist->status}}</td>
                             <td style="text-align: center">{{$orderlist->method}}</td>
                             <td>
-                                <a class="btn btn-sm btn-primary" href="">編輯</a>
+                                <a class="btn btn-sm btn-primary" href="{{ route('admin.orderlists.edit', $orderlist->id) }}">編輯</a>
 
                                 <form action="" method="POST" style="display:inline">
                                     @method('DELETE')

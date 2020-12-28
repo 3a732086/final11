@@ -41,4 +41,6 @@ Route::prefix('admin')->group(function (){
     Route::delete('menus/{id}',[AdminMenuController::class, 'destroy'])->name('admin.menus.destroy');
 
     Route::get('orderlists', [AdminOrderlistController::class, 'index'])->name('admin.orderlists.index');
+    Route::get('orderlists/{id}/edit', [AdminOrderlistController::class, 'edit'])->name('admin.orderlists.edit');
+    Route::patch('orderlists/{id}',[AdminOrderlistController::class, 'update'])->name('admin.orderlists.update');
 });
