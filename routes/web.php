@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminDashboardController;
 use App\Http\Controllers\AdminMemberController;
 use App\Http\Controllers\AdminMenuController;
+use App\Http\Controllers\AdminOrderlistController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -38,4 +39,6 @@ Route::prefix('admin')->group(function (){
     Route::get('menus/{id}/edit', [AdminMenuController::class, 'edit'])->name('admin.menus.edit');
     Route::patch('menus/{id}',[AdminMenuController::class, 'update'])->name('admin.menus.update');
     Route::delete('menus/{id}',[AdminMenuController::class, 'destroy'])->name('admin.menus.destroy');
+
+    Route::get('orderlists', [AdminOrderlistController::class, 'index'])->name('admin.orderlists.index');
 });
