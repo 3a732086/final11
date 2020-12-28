@@ -1,25 +1,85 @@
 <nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/modern-business.css" rel="stylesheet">
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- Navigation 左半邊 -->
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
             <div class="flex">
                 <!-- Logo -->
-                <div class="flex-shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
-                        <x-jet-application-mark class="block h-9 w-auto" />
-                    </a>
-                </div>
+            {{--                <div class="flex-shrink-0 flex items-center">--}}
+            {{--                    <a href="{{ route('home.index') }}">--}}
+            {{--                        <x-jet-application-mark class="block h-9 w-auto" />--}}
+            {{--                    </a>--}}
+            {{--                </div>--}}
 
-                <!-- Navigation Links -->
+            <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
+                    <x-jet-nav-link href="{{ route('home.login_index') }}" :active="request()->routeIs('dashboard')">
+                        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+                            {{ __('勤益線上點餐系統') }}
+                        </h2>
                     </x-jet-nav-link>
                 </div>
-            </div>
 
+            </div>
+            <!-- Navigation 左半邊 -->
+
+            <!-- Navigation 右半邊 -->
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ml-6">
+                <div class="flex">
+
+                    <!-- Navigation Links -->
+                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                        <x-jet-nav-link href="{{ route('home.login_index') }}" :active="request()->routeIs('dashboard')">
+                            {{ __('首頁') }}
+                        </x-jet-nav-link>
+                    </div>
+
+                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                        <x-jet-nav-link href="{{ route('products.index') }}" :active="request()->routeIs('dashboard')">
+                            {{ __('菜單') }}
+                        </x-jet-nav-link>
+                    </div>
+
+                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                        <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
+                            {{ __('Services') }}
+                        </x-jet-nav-link>
+                    </div>
+
+                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                        <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
+                            {{ __('Contact') }}
+                        </x-jet-nav-link>
+                    </div>
+
+                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                        <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
+                            {{ __('Services') }}
+                        </x-jet-nav-link>
+                    </div>
+
+                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                        <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
+                            {{ __('Services') }}
+                        </x-jet-nav-link>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                    </div>
+
+                </div>
+                <!-- Navigation 右半邊 -->
+
                 <x-jet-dropdown align="right" width="48">
                     <x-slot name="trigger">
                         @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
