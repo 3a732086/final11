@@ -3691,9 +3691,9 @@ function trim(str) {
  *  typeof document -> undefined
  *
  * react-native:
- *  navigator.product -> 'ReactNative'
+ *  navigator.products -> 'ReactNative'
  * nativescript
- *  navigator.product -> 'NativeScript' or 'NS'
+ *  navigator.products -> 'NativeScript' or 'NS'
  */
 function isStandardBrowserEnv() {
   if (typeof navigator !== 'undefined' && (navigator.product === 'ReactNative' ||
@@ -20327,7 +20327,7 @@ module.exports = {
      * @category Math
      * @param {number} multiplier The first number in a multiplication.
      * @param {number} multiplicand The second number in a multiplication.
-     * @returns {number} Returns the product.
+     * @returns {number} Returns the products.
      * @example
      *
      * _.multiply(6, 4);
@@ -21338,8 +21338,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\Win-PC\Desktop\wagon\uwamp\www\final11\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\Win-PC\Desktop\wagon\uwamp\www\final11\resources\css\app.css */"./resources/css/app.css");
+__webpack_require__(/*! C:\Users\Win-PC\Desktop\wagon\uwamp\www\test_final11\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\Win-PC\Desktop\wagon\uwamp\www\test_final11\resources\css\app.css */"./resources/css/app.css");
 
 
 /***/ })
