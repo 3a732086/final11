@@ -33,5 +33,6 @@ Route::prefix('admin')->group(function (){
     Route::delete('members/{id}',[AdminMemberController::class, 'destroy'])->name('admin.members.destroy');
 
     Route::get('menus', [AdminMenuController::class, 'index'])->name('admin.menus.index');                          //餐點管理
-
+    Route::get('menus/create', [AdminMenuController::class, 'create'])->name('admin.menus.create');
+    Route::post('menus/store',[AdminMenuController::class, 'store'])->name('admin.menus.store');
 });

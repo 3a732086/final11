@@ -19,7 +19,7 @@
     <!-- /.row -->
     <div class="row" style="margin-bottom: 20px; text-align: right">
         <div class="col-lg-12">
-            <a href="" class="btn btn-success">建立新餐點</a>
+            <a href="{{ route('admin.menus.create') }}" class="btn btn-success">建立新餐點</a>
         </div>
     </div>
     <!-- /.row -->

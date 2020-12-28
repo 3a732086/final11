@@ -16,4 +16,15 @@ class AdminMenuController extends Controller
         ];
         return view('admin.menus.index',$data);
     }
+
+    public function create()
+    {
+        return view('admin.menus.create');
+    }
+
+    public function store(Request $request)
+    {
+        Product::create($request->all());
+        return redirect()->route('admin.menus.index');
+    }
 }
