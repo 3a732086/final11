@@ -16,4 +16,18 @@ class AdminMemberController extends Controller
         return view('admin.members.index',$data);
     }
 
+    public function edit($id)
+    {
+        $user = User::find($id);
+        $data = ['user' => $user];
+
+        return view('admin.members.edit', $data);
+    }
+
+    public function update(Request $request, $id)
+    {
+        $user = User::find($id);
+        $user->update($request->all());
+        return redirect()->route('admin.members.index');
+    }
 }
