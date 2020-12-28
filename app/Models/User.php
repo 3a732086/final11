@@ -24,9 +24,12 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
+        'account',
+        'password',
         'name',
         'email',
-        'password',
+        'address',
+        'telephone',
     ];
 
     /**
@@ -58,4 +61,14 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    public function carts()
+    {
+        $this->hasOne(Cart::class);
+    }
+
+    public function orderlists()
+    {
+        $this->hasMany(Orderlist::class);
+    }
 }
