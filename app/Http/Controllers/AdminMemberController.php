@@ -30,4 +30,10 @@ class AdminMemberController extends Controller
         $user->update($request->all());
         return redirect()->route('admin.members.index');
     }
+
+    public function destroy($id)
+    {
+        User::destroy($id);
+        return redirect()->route('admin.members.index');
+    }
 }

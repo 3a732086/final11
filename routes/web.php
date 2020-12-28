@@ -29,5 +29,6 @@ Route::prefix('admin')->group(function (){
     Route::get('members', [AdminMemberController::class, 'index'])->name('admin.members.index');
     Route::get('members/{id}/edit', [AdminMemberController::class, 'edit'])->name('admin.members.edit');
     Route::patch('members/{id}',[AdminMemberController::class, 'update'])->name('admin.members.update');
+    Route::delete('members/{id}',[AdminMemberController::class, 'destroy'])->name('admin.members.destroy');
 
 });
