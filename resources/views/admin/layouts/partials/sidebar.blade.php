@@ -37,6 +37,9 @@
             <li class="active">
                 <a href="{{ route('admin.dashboard.index') }}"><i class="fa fa-fw fa-dashboard"></i> 主控台</a>
             </li>
+            <li>
+                <a href="{{route('admin.members.index')}}"><i class="fa fa-fw fa-edit"></i> 會員管理</a>
+            </li>
 
 
 

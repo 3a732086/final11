@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminDashboardController;
+use App\Http\Controllers\AdminMemberController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,5 +26,5 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 Route::prefix('admin')->group(function (){
     Route::get('/',[AdminDashboardController::class, 'index'])->name('admin.dashboard.index');
-
+    Route::get('members', [AdminMemberController::class, 'index'])->name('admin.members.index');
 });
