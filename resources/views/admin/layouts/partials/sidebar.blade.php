@@ -40,6 +40,9 @@
             <li>
                 <a href="{{route('admin.members.index')}}"><i class="fa fa-fw fa-edit"></i> 會員管理</a>
             </li>
+            <li>
+                <a href="{{route('admin.menus.index')}}"><i class="fa fa-fw fa-edit"></i> 餐點管理</a>
+            </li>
 
 
 
