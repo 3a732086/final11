@@ -36,3 +36,5 @@ Route::post('/products',[ProductController::class, 'store'])->middleware('auth')
 
 //購物車//
 Route::get('/cartlist',[CartController::class,'index'])->name('carts.index'); //購物車列表
+Route::delete('/cartlist/{id}',[CartController::class,'destroy'])->name('carts.destroy');
+//購物車//
