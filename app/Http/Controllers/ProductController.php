@@ -59,11 +59,11 @@ class ProductController extends Controller
             ->select('carts.id')
             ->get();
 
-        $id = $carts_id[0]->id;
-        $quan = $quantity[0]->quantity;
-
             if($count>=1)
             {
+                $id = $carts_id[0]->id;
+                $quan = $quantity[0]->quantity;
+
                 $cart = Cart::find($id);
                 $cart->quantity = $request->input('quantity')+$quan;
                 $cart->save();
