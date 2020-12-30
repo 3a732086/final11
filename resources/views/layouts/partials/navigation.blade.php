@@ -1,3 +1,11 @@
+<?php
+
+use App\Http\Controllers\CartController;
+use App\Models\Cart;
+
+$total = CartController::cartItem();
+?>
+
 <!-- Navigation -->
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
@@ -13,9 +21,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('products.index')}}">菜單</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
-                </li>
+
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Portfolio
@@ -27,6 +33,13 @@
                         <a class="dropdown-item" href="portfolio-4-col.html">4 Column Portfolio</a>
                         <a class="dropdown-item" href="portfolio-item.html">Single Portfolio Item</a>
                     </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('carts.index')}}">
+                        <i class="fas fa-shopping-cart fa-lg"></i>
+                        CART({{$total}})
+                    </a>
                 </li>
 
                 <li class="nav-item">
