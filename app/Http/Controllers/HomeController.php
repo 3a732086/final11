@@ -13,6 +13,6 @@ class HomeController extends Controller
 
     public function login_index()
     {
-        return view('home.login_index');
+        return view('home.index');
     }
 }
