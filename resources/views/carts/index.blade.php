@@ -74,6 +74,7 @@ $total = CartController::total();
                                 <td class="align-middle text-right">${{($item->quantity)*($item->price)}}</td>
                             </tr>
                             @endforeach
+
                             <tr class="text-right">
                                 <td colspan="4"><strong>合計</strong></td>
                                 <td><strong>${{$total}}</strong></td>
@@ -83,7 +84,11 @@ $total = CartController::total();
 
                         <div class="mt-3 d-flex justify-content-end">
                             <button class="btn btn-secondary mr-2" style="background-color: white" ><a href="{{route('products.index')}}">繼續選購</a></button>
-                        <button type="submit" class="btn btn-primary">確認付款</button>
+                            <form action="{{route('carts.store')}}" method="POST" style="display:inline">
+                                @method('post')
+                                @csrf
+                            <button type="submit" onclick="return confirm('是否確認結帳?')" class="btn btn-primary">確認付款</button>
+                            </form>
                         </div>
 
 
