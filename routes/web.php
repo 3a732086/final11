@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
@@ -33,4 +34,5 @@ Route::post('/products',[ProductController::class, 'store'])->middleware('auth')
 //菜單//
 
 
-
+//購物車//
+Route::get('/cartlist',[CartController::class,'index'])->name('carts.index'); //購物車列表
