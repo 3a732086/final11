@@ -56,7 +56,12 @@
 
                 <div class="form-group">
                     <label for="status">訂單狀態：</label>
-                    <input id="status" name="status" class="form-control"  value="{{old('status',$orderlist->status)}}">
+                    <select name="status" id="status">{{old('status',$orderlist->status)}}
+                        <option value="準備中">準備中</option>
+                        <option value="已完成">已完成</option>
+                        <option value="已取消">已取消</option>
+                    </select>
+
                 </div>
 
                 <div class="form-group">
