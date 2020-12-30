@@ -11,7 +11,7 @@
 
             <div>
                 <x-jet-label for="account" value="{{ __('Account') }}" />
-                <x-jet-input id="account" class="block mt-1 w-full" type="text" name="account" :value="old('account')" required autofocus autocomplete="name" />
+                <x-jet-input id="account" class="block mt-1 w-full" type="text" name="account" :value="old('account')" required autofocus autocomplete="account" />
             </div>
 
             <div class="mt-4">
