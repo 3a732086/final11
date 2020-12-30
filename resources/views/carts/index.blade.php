@@ -1,3 +1,10 @@
+<?php
+
+use App\Http\Controllers\CartController;
+use App\Models\Cart;
+
+$total = CartController::total();
+?>
 @extends('layouts.master')
 
 @section('title','購物車')
@@ -20,36 +27,59 @@
         </ol>
 
         <!-- Blog Post -->
-        @foreach($results as $item)
-        <div class="card mb-4">
-            <div class="card-body">
-                <div class="row">
 
-                    <div class="flex">
-                        <img class="img-fluid" src="{{asset($item->img2)}}">
+
+        <div class="row justify-content-center mt-4">
+            <div class="col-md-8">
+                <div class="accordion" id="accordionExample">
+                    <div class="card card-bottom">
+                        <div class="card-header  d-flex justify-content-between" id="headingOne">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                                    aria-expanded="true" aria-controls="collapseOne">
+                                顯示購物車細節
+                            </button>
+                            <div class="h3 d-inline-block mt-2">
+                                <strong>${{$total}}</strong>
+                            </div>
+                        </div>
+
                     </div>
-
-
-                    <div class="flex">
-                        <h2><p class="card-text">{{$item->name}}</p></h2>
-                        <p class="card-text">{{$item->detail}}</p>
-                    </div>
-
-                    <div class="flex">
-                        <p class="card-text">數量：{{$item->quantity}}</p>
-                        <p class="card-text">${{($item->quantity)*($item->price)}}</p>
-                    </div>
-
-
-                    <div class="flex">
-                        <a href="#" class="btn btn-primary">刪除餐點 &rarr;</a>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    @endforeach
-
+                    <div id="collapseOne" class="collapse show " aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <table class="table" >
+                            @foreach($results as $item)
+                            <thead>
+                            <tr>
+                                <th width="20"></th>
+                                <th width="100"></th>
+                                <th> 商品名稱</th>
+                                <th>數量</th>
+                                <th class="text-center" width="120">小計</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <form action="{{route('carts.destroy',$item->id)}}" method="POST" style="display:inline">
+                                    @method('delete')
+                                    @csrf
+                                    <td class="align-middle"><button type="submit" style="border: 0;background-color: white"><i class="far fa-trash-alt mr-3"></i></button></td>
+                                </form>
+                                <td class="align-middle">
+                                    <div class="card p-1 card-bottom">
+                                        <img src="{{$item->img2}}"
+                                             alt="..." width="80px;">
+                                    </div>
+                                </td>
+                                <td class="align-middle "> {{$item->name}}</td>
+                                <td class="align-middle">{{$item->quantity}}</td>
+                                <td class="align-middle text-right">${{($item->quantity)*($item->price)}}</td>
+                            </tr>
+                            @endforeach
+                            <tr class="text-right">
+                                <td colspan="4"><strong>合計</strong></td>
+                                <td><strong>${{$total}}</strong></td>
+                            </tr>
+                            </tbody>
+                        </table>
 
 
         <!-- Pagination -->
