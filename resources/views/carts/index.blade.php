@@ -81,6 +81,13 @@ $total = CartController::total();
                             </tbody>
                         </table>
 
+                        <div class="mt-3 d-flex justify-content-end">
+                            <button class="btn btn-secondary mr-2" style="background-color: white" ><a href="{{route('products.index')}}">繼續選購</a></button>
+                        <button type="submit" class="btn btn-primary">確認付款</button>
+                        </div>
+
+
+
 
         <!-- Pagination -->
 
