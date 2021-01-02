@@ -1,3 +1,10 @@
+<?php
+
+use App\Http\Controllers\CartController;
+use App\Models\Cart;
+
+$total = CartController::cartItem();
+?>
 <nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
 
     <!-- Bootstrap core CSS -->
@@ -53,28 +60,17 @@
                     </div>
 
                     <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                        <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                            {{ __('Services') }}
+                        <x-jet-nav-link href="{{ route('carts.index') }}" :active="request()->routeIs('dashboard')">
+                            CART({{$total}})
                         </x-jet-nav-link>
                     </div>
 
-                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                        <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                            {{ __('Contact') }}
-                        </x-jet-nav-link>
-                    </div>
 
                     <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                        <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                            {{ __('Services') }}
+                        <x-jet-nav-link href="{{ route('orders.index') }}" :active="request()->routeIs('dashboard')">
+                            {{ __('訂單查詢') }}
                         </x-jet-nav-link>
-                    </div>
-
-                    <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                        <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                            {{ __('Services') }}
-                        </x-jet-nav-link>
-                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     </div>
 
                 </div>
