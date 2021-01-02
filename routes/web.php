@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
@@ -35,7 +36,12 @@ Route::post('/products',[ProductController::class, 'store'])->middleware('auth')
 
 
 //購物車//
-Route::get('/cartlist',[CartController::class,'index'])->name('carts.index'); //購物車列表
-Route::delete('/cartlist/{id}',[CartController::class,'destroy'])->name('carts.destroy');
-Route::post('/checkout',[CartController::class, 'store'])->name('carts.store');               //確認訂單
+Route::get('/cartlist',[CartController::class,'index'])->middleware('auth')->name('carts.index'); //購物車列表
+Route::delete('/cartlist/{id}',[CartController::class,'destroy'])->name('carts.destroy'); //刪除購物車內商品
+Route::post('/checkout',[CartController::class, 'store'])->name('carts.store'); //購物車結帳
 //購物車//
+
+
+//訂單
+Route::get('/orderlists',[OrderController::class,'index'])->middleware('auth')->name('orders.index'); //訂單首頁
+//訂單
