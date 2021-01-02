@@ -104,6 +104,7 @@ class CartController extends Controller
                 ->where('carts.users_id',$userID)
                 ->where('status' , '準備中')
                 ->select('orderlists.id','carts.products_id','carts.quantity','products.price','orderlists.status','orderlists.total')
+                ->orderBy('orderlists.id','DESC')
                 ->get();
 
             $allorderlists = DB::table('products')
@@ -113,7 +114,6 @@ class CartController extends Controller
                 ->where('status' , '準備中')
                 ->select('orderlists.id','carts.products_id','carts.quantity','products.price','orderlists.status','orderlists.total')
                 ->count();
-
 
 
              $j = 0;
