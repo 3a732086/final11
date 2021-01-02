@@ -63,6 +63,9 @@ $total = CartController::total();
                                     @csrf
                                     <td class="align-middle"><button type="submit" style="border: 0;background-color: white"><i class="far fa-trash-alt mr-3"></i></button></td>
                                 </form>
+                                <form action="{{route('carts.store')}}" method="POST" style="display:inline">
+                                    @method('post')
+                                    @csrf
                                 <td class="align-middle">
                                     <div class="card p-1 card-bottom">
                                         <img src="{{$item->img2}}"
@@ -84,9 +87,7 @@ $total = CartController::total();
 
                         <div class="mt-3 d-flex justify-content-end">
                             <button class="btn btn-secondary mr-2" style="background-color: white" ><a href="{{route('products.index')}}">繼續選購</a></button>
-                            <form action="{{route('carts.store')}}" method="POST" style="display:inline">
-                                @method('post')
-                                @csrf
+
                             <button type="submit" onclick="return confirm('是否確認結帳?')" class="btn btn-primary">確認付款</button>
                             </form>
                         </div>
