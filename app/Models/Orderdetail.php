@@ -20,7 +20,7 @@ class Orderdetail extends Model
 
     public function orderlists()
     {
-        $this->hasOne(Orderlist::class);
+        $this->belongsTo(Orderlist::class);
     }
 
     public function products()
