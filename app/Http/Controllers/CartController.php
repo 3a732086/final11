@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Cart;
+use App\Models\Orderdetail;
 use App\Models\Orderlist;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -81,6 +82,7 @@ class CartController extends Controller
             ->select('products.name','products.price','carts.quantity')
             ->count();
 
+
         $total = 0;
 
         for($i=0;$i<$count;$i++)
@@ -89,21 +91,53 @@ class CartController extends Controller
             $quantity = $totals[$i]->quantity;
             $total += $price * $quantity;
         }
-        $allcarts = Cart::where('users_id',$userID)->get();
-        foreach ($allcarts as $carts)
-        {
+
+            //將購物車資料存到訂單主檔
             $order = new Orderlist();
             $order->users_id = $userID;
-            $order->products_id = $carts->products_id;
             $order->total = $total;
-            $order->status = "準備中";
             $order->method = "預定快取";
+            $order->status = "準備中";
             $order->save();
-            Cart::where('users_id',$userID)->delete();
+
+
+        $allorderlists = DB::table('orderlists')
+            ->where('users_id',$userID)
+            ->where('method' , '準備中')
+            ->get();
+
+
+//        $details = DB::table('carts')
+//            ->join('products','carts.products_id' ,'=','products.id')
+//            ->join('orderlists','orderlists.users_id','=','carts.users_id')
+//            ->select('orderlists.id','products.id','products.price','carts.quantity')
+//            ->get();
+//
+//        $detailss = DB::table('carts')
+//            ->join('products','carts.products_id' ,'=','products.id')
+//            ->join('orderlists','orderlists.users_id','=','carts.users_id')
+//            ->select('products.id','products.price','carts.quantity')
+//            ->get();
+
+
+        foreach ($allorderlists as $all)
+        {
+            $orderlists_id = $all->id;
+            $products_id = $all->id;
+            $products_price = $all->total;
+            $carts_quantity = $all->total;
+
+
+            $detail = new Orderdetail();
+            $detail->orderlists_id = $orderlists_id;
+            $detail->products_id =  $products_id;
+            $detail->quantity = $carts_quantity;
+            $detail->price = $products_price;
         }
 
         return redirect()->route('products.index');
     }
+
 
     static public function cartItem() //顯示導覽列購物車內產品數量
     {
