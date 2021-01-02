@@ -13,10 +13,9 @@ class Orderlist extends Model
 
     protected $fillable = [
         'users_id',
-        'products_id',
         'total',
-        'status',
         'method',
+        'status',
     ];
 
     public function users()
@@ -24,8 +23,8 @@ class Orderlist extends Model
         $this->hasOne(User::class);
     }
 
-    public function products()
+    public function orderdetails()
     {
-        $this->hasMany(Product::class);
+        $this->hasMany(Orderdetail::class);
     }
 }
