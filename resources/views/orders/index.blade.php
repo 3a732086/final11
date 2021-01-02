@@ -19,20 +19,17 @@
             <li class="breadcrumb-item active">訂單查詢</li>
         </ol>
 
-        @foreach($ordercounts as $ordercount)
+        @foreach($orderdetails as $orderdetail)
             <div class="card mb-4">
                 <div class="card-body">
                     <div class="row">
                         <div class="col-lg-6">
-                                <p class="card-text"><b>訂餐時間：</b> {{$ordercount->created_at}}</p>
-                                <p class="card-text"><b>預計取餐時間：</b> {{$ordercount->created_at}}</p>
-                                <p class="card-text"><b>餐點名稱/數量：</b>@foreach($orderdetails as $orderdetail){{$orderdetail->name}}/{{$orderdetail->quantity}}<br>@endforeach</p>
-                                <p class="card-text"><b>訂單金額：</b>{{$ordercount->total}} </p>
-                                <p class="card-text"><b>訂單方式：</b>{{$ordercount->method}} </p>
-                                <p class="card-text"><b>訂單狀態：</b>{{$ordercount->status}} </p>
-                        @if($ordercount->status == '準備中')
-                                <button>a</button>
-                        @endif
+                                <p class="card-text"><b>訂餐時間：</b> {{$orderdetail->created_at}}</p>
+                                <p class="card-text"><b>預計取餐時間：</b> {{\Carbon\Carbon::parse($orderdetail->created_at)->addMinutes(20)}}</p>
+                                <p class="card-text"><b>餐點名稱/數量：</b>{{$orderdetail->name}}<br></p>
+                                <p class="card-text"><b>訂單金額：</b>{{$orderdetail->total}} </p>
+                                <p class="card-text"><b>訂單方式：</b>{{$orderdetail->method}} </p>
+                                <p class="card-text"><b>訂單狀態：</b>{{$orderdetail->status}} </p>
                         </div>
                     </div>
                 </div>

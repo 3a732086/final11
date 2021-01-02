@@ -11,19 +11,16 @@ class OrderController extends Controller
     {
         $userid=auth()->user()->id;
 
-        $ordercounts = DB::table('orderlists')
-            ->where('users_id',$userid)
-            ->get();
 
-        $orderdetails = DB::table('orderdetails')
+        $orderdetails  = DB::table('orderdetails')
             ->join('products','orderdetails.products_id','=','products.id')
             ->join('orderlists','orderlists.id','=','orderdetails.orderlists_id')
-            ->select('products.name','quantity')
+            ->select('orderlists_id',DB::raw('group_concat(products.name," / ",quantity )as name'), 'orderlists.total','orderlists.method', 'orderlists.status','orderdetails.created_at' )
+            ->groupBy('orderlists_id','created_at')
             ->get();
 
 
         $data = [
-            'ordercounts' => $ordercounts,
             'orderdetails' => $orderdetails,
         ];
 
