@@ -20,9 +20,9 @@ class Product extends Model
         'type',
     ];
 
-    public function orderlists()
+    public function orderdetails()
     {
-        $this->hasMany(Orderlist::class);
+        $this->hasMany(Orderdetail::class);
     }
 
     public function carts()

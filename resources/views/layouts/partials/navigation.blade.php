@@ -30,7 +30,7 @@ $total = CartController::cartItem();
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="">訂單</a>
+                    <a class="nav-link" href="{{route('orders.index')}}">訂單查詢</a>
                 </li>
 
                 <li class="nav-item">

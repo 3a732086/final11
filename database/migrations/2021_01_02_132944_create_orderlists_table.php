@@ -16,10 +16,9 @@ class CreateOrderlistsTable extends Migration
         Schema::create('orderlists', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('users_id')->unsigned();
-            $table->integer('products_id')->unsigned();
             $table->integer('total');
-            $table->string('status');
             $table->string('method');
+            $table->string('status');
             $table->timestamps();
         });
     }
