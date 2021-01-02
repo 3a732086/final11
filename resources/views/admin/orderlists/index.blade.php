@@ -32,7 +32,7 @@
                     <tr>
                         <th  style="text-align: center">訂單編號</th>
                         <th >會員編號</th>
-                        <th  style="text-align: center">餐點編號</th>
+                        <th  style="text-align: center">餐點名稱/數量</th>
                         <th  style="text-align: center">總金額</th>
                         <th  style="text-align: center">訂單狀態</th>
                         <th  style="text-align: center">方法</th>
@@ -42,16 +42,16 @@
                     <tbody>
                     @foreach($orderlists as $orderlist)
                         <tr>
-                            <td style="text-align: center">{{ $orderlist->id }}</td>
+                            <td style="text-align: center">{{ $orderlist->orderlists_id }}</td>
                             <td>{{$orderlist->users_id}}</td>
-                            <td style="text-align: center">{{$orderlist->products_id}}</td>
+                            <td style="text-align: center">{{$orderlist->name}}</td>
                             <td style="text-align: center">{{$orderlist->total}}</td>
                             <td style="text-align: center">{{$orderlist->status}}</td>
                             <td style="text-align: center">{{$orderlist->method}}</td>
                             <td>
-                                <a class="btn btn-sm btn-primary" href="{{ route('admin.orderlists.edit', $orderlist->id) }}">編輯</a>
+                                <a class="btn btn-sm btn-primary" href="{{ route('admin.orderlists.edit', $orderlist->orderlists_id) }}">編輯</a>
 
-                                <form action="/admin/orderlists/{{$orderlist->id}}" method="POST" style="display:inline">
+                                <form action="/admin/orderlists/{{$orderlist->orderlists_id}}" method="POST" style="display:inline">
                                     @method('DELETE')
                                     @csrf
                                     <button class="btn btn-sm btn-danger" type="submit" onclick="return confirm('是否確認刪除')">刪除</button>

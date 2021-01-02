@@ -2,14 +2,24 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Orderdetail;
 use App\Models\Orderlist;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class AdminOrderlistController extends Controller
 {
     public function index()
     {
-        $orderlists = Orderlist::orderBy('created_at','ASC')->paginate(10);
+
+        $orderlists  = DB::table('orderdetails')
+            ->join('products','orderdetails.products_id','=','products.id')
+            ->join('orderlists','orderlists.id','=','orderdetails.orderlists_id')
+            ->join('users','orderlists.users_id','users.id')
+            ->select('orderdetails.orderlists_id','users_id',DB::raw('group_concat(products.name," / ",quantity )as name'), 'orderlists.total','orderlists.method', 'orderlists.status','orderdetails.created_at' )
+            ->groupBy('orderlists_id','created_at')
+            ->paginate(10);
+        //$orderlists = Orderlist::orderBy('created_at','ASC')->paginate(10);
         $data = [
             'orderlists' => $orderlists
 
@@ -19,7 +29,18 @@ class AdminOrderlistController extends Controller
 
     public function edit($id)
     {
-        $orderlist = Orderlist::find($id);
+
+        $orderlist  = DB::table('orderdetails')
+            ->join('products','orderdetails.products_id','=','products.id')
+            ->join('orderlists','orderlists.id','=','orderdetails.orderlists_id')
+            ->join('users','orderlists.users_id','users.id')
+            ->select('orderdetails.orderlists_id','users_id',DB::raw('group_concat(products.name," / ",quantity )as name'), 'orderlists.total','orderlists.method', 'orderlists.status','orderdetails.created_at' )
+            ->where('orderlists.id',$id)
+            ->groupBy('orderlists_id','created_at')
+            ->get();
+
+
+        //$orderlist = Orderlist::find($id);
         $data = ['orderlist' =>  $orderlist];
 
         return view('admin.orderlists.edit', $data);
