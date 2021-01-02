@@ -11,26 +11,29 @@
         <a class="navbar-brand" href="{{ route('admin.dashboard.index') }}">管理後台</a>
     </div>
     <!-- Top Menu Items -->
+    @if (Route::has('login'))
+        @auth
     <ul class="nav navbar-right top-nav">
         <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> 管理員 <b class="caret"></b></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> {{Auth::user()->name}} <b class="caret"></b></a>
             <ul class="dropdown-menu">
                 <li>
-                    <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
+                    <a href="{{ route('profile.show') }}"><i class="fa fa-fw fa-user"></i> Profile</a>
                 </li>
-                <li>
-                    <a href="#"><i class="fa fa-fw fa-envelope"></i> Inbox</a>
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>
-                </li>
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
                 <li class="divider"></li>
                 <li>
-                    <a href="#"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                    <a href="{{ route('logout') }}"
+                       onclick="event.preventDefault();
+                       this.closest('form').submit();"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
                 </li>
+                </form>
             </ul>
         </li>
     </ul>
+    @endauth
+@endif
     <!-- Sidebar Menu Items - These collapse to the responsive navigation menus on small screens -->
     <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav side-nav">
