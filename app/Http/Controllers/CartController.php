@@ -57,8 +57,6 @@ class CartController extends Controller
     }
 
 
-
-
     public function destroy($id)
     {
         Cart::destroy($id);
@@ -100,40 +98,43 @@ class CartController extends Controller
             $order->status = "準備中";
             $order->save();
 
+            $allorderlists2 = DB::table('products')
+                ->join('carts','carts.products_id' ,'=','products.id')
+                ->join('orderlists','orderlists.users_id','=','carts.users_id')
+                ->where('carts.users_id',$userID)
+                ->where('status' , '準備中')
+                ->select('orderlists.id','carts.products_id','carts.quantity','products.price','orderlists.status','orderlists.total')
+                ->get();
 
-        $allorderlists = DB::table('orderlists')
-            ->where('users_id',$userID)
-            ->where('method' , '準備中')
-            ->get();
-
-
-//        $details = DB::table('carts')
-//            ->join('products','carts.products_id' ,'=','products.id')
-//            ->join('orderlists','orderlists.users_id','=','carts.users_id')
-//            ->select('orderlists.id','products.id','products.price','carts.quantity')
-//            ->get();
-//
-//        $detailss = DB::table('carts')
-//            ->join('products','carts.products_id' ,'=','products.id')
-//            ->join('orderlists','orderlists.users_id','=','carts.users_id')
-//            ->select('products.id','products.price','carts.quantity')
-//            ->get();
+            $allorderlists = DB::table('products')
+                ->join('carts','carts.products_id' ,'=','products.id')
+                ->join('orderlists','orderlists.users_id','=','carts.users_id')
+                ->where('carts.users_id',$userID)
+                ->where('status' , '準備中')
+                ->select('orderlists.id','carts.products_id','carts.quantity','products.price','orderlists.status','orderlists.total')
+                ->count();
 
 
-        foreach ($allorderlists as $all)
-        {
-            $orderlists_id = $all->id;
-            $products_id = $all->id;
-            $products_price = $all->total;
-            $carts_quantity = $all->total;
 
+             $j = 0;
 
-            $detail = new Orderdetail();
-            $detail->orderlists_id = $orderlists_id;
-            $detail->products_id =  $products_id;
-            $detail->quantity = $carts_quantity;
-            $detail->price = $products_price;
-        }
+             for($j=0;$j<$count;$j++)
+             {
+                $orderlists_id = $allorderlists2[$j]->id;
+                $products_id = $allorderlists2[$j]->products_id;
+                $products_price =$allorderlists2[$j]->price;
+                $carts_quantity = $allorderlists2[$j]->quantity;
+
+                $detail = new Orderdetail();
+                $detail->orderlists_id = $orderlists_id;
+                $detail->products_id =  $products_id;
+                $detail->quantity = $carts_quantity;
+                $detail->price = $products_price;
+                $detail->save();
+
+                Cart::where('users_id',$userID)->delete();
+             }
+
 
         return redirect()->route('products.index');
     }
