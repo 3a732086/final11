@@ -13,6 +13,13 @@ class HomeController extends Controller
 
     public function login_index()
     {
-        return view('home.index');
+        if(auth()->user()->type == '會員')
+        {
+            return view('home.index');
+        }
+        else if (auth()->user()->type == '管理員')
+        {
+            return view('admin.dashboard.index');
+        }
     }
 }
