@@ -26,16 +26,17 @@ Route::get('/',[HomeController::class, 'index'])->name('home.index');
 Route::get('/home',[HomeController::class, 'login_index'])->middleware('auth')->name('home.login_index');
 //首頁路由//
 
+
 //身分驗證//
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
-
+//身分驗證//
 
 
 //管理員路由
 Route::prefix('admin')->group(function (){
-    Route::get('/',[AdminDashboardController::class, 'index'])->name('admin.dashboard.index');                              //會員管理(Dashboard)
+    Route::get('/',[AdminDashboardController::class, 'index'])->middleware('auth')->name('admin.dashboard.index');                              //會員管理(Dashboard)
     Route::get('members', [AdminMemberController::class, 'index'])->name('admin.members.index');                            //會員管理(顯示所有會員)
     Route::get('members/{id}/edit', [AdminMemberController::class, 'edit'])->name('admin.members.edit');                    //編輯會員資料
     Route::patch('members/{id}',[AdminMemberController::class, 'update'])->name('admin.members.update');                    //更新會員資料
@@ -55,7 +56,7 @@ Route::prefix('admin')->group(function (){
 });
 //管理員路由
 
-//身分驗證//
+
 
 
 //菜單//
@@ -66,14 +67,6 @@ Route::post('/products',[ProductController::class, 'store'])->middleware('auth')
 
 
 //購物車//
-
-Route::get('/cartlist',[CartController::class,'index'])->name('carts.index'); //購物車列表
-
-Route::delete('/cartlist/{id}',[CartController::class,'destroy'])->name('carts.destroy');
-Route::post('/checkout',[CartController::class, 'store'])->name('carts.store');               //確認訂單
-//購物車//
-
-
 Route::get('/cartlist',[CartController::class,'index'])->middleware('auth')->name('carts.index'); //購物車列表
 Route::delete('/cartlist/{id}',[CartController::class,'destroy'])->name('carts.destroy'); //刪除購物車內商品
 Route::post('/checkout',[CartController::class, 'store'])->name('carts.store'); //購物車結帳
