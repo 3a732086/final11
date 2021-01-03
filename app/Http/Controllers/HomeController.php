@@ -19,7 +19,18 @@ class HomeController extends Controller
         }
         else if (auth()->user()->type == '管理員')
         {
-            return view('admin.dashboard.index');
+            return redirect('admin');
         }
     }
+
+    static public function isAdmin()
+    {
+        if (isset(auth()->user()->id))
+        {
+            if(auth()->user()->type == '管理員')
+                return 1;
+        }
+
+    }
+
 }
