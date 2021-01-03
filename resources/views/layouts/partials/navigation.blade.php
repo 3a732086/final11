@@ -1,9 +1,11 @@
 <?php
 
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\HomeController;
 use App\Models\Cart;
 
 $total = CartController::cartItem();
+$true = HomeController::isAdmin();
 ?>
 
 <!-- Navigation -->
@@ -15,9 +17,26 @@ $total = CartController::cartItem();
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="{{route('home.index')}}">首頁</a>
-                </li>
+                @if (Route::has('login'))
+                    @auth
+                        @if($true == 1 )
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{route('admin.dashboard.index')}}">返回後台</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{route('home.index')}}">首頁</a>
+                            </li>
+                        @else()
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{route('home.login_index')}}">首頁</a>
+                            </li>
+                        @endif
+                @else
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{route('home.index')}}">首頁</a>
+                        </li>
+                    @endauth
+                @endif
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('products.index')}}">菜單</a>
                 </li>
