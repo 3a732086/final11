@@ -13,24 +13,24 @@
             </ol>
             <div class="carousel-inner" role="listbox">
                 <!-- Slide One - Set the background image for this slide in the line below -->
-                <div class="carousel-item active" style="background-image: url('http://placehold.it/1900x1080')">
+                <div class="carousel-item active" style="background-image:url('img/2.jpg')">
                     <div class="carousel-caption d-none d-md-block">
-                        <h3>First Slide</h3>
-                        <p>This is a description for the first slide.</p>
+                        <h3></h3>
+                        <p></p>
                     </div>
                 </div>
                 <!-- Slide Two - Set the background image for this slide in the line below -->
-                <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
+                <div class="carousel-item" style="background-image: url('img/4.jpg')">
                     <div class="carousel-caption d-none d-md-block">
-                        <h3>Second Slide</h3>
-                        <p>This is a description for the second slide.</p>
+                        <h3></h3>
+                        <p></p>
                     </div>
                 </div>
                 <!-- Slide Three - Set the background image for this slide in the line below -->
-                <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
+                <div class="carousel-item" style="background-image: url('img/3.jpg')">
                     <div class="carousel-caption d-none d-md-block">
-                        <h3>Third Slide</h3>
-                        <p>This is a description for the third slide.</p>
+                        <h3></h3>
+                        <p></p>
                     </div>
                 </div>
             </div>
@@ -50,33 +50,34 @@
     <div class="container">
 
         <h1 class="my-4">歡迎來到勤益線上訂餐系統</h1>
+        <h3>為您推薦</h3>
 
         <!-- Marketing Icons Section -->
         <div class="row">
             <div class="col-lg-4 mb-4">
                 <div class="card h-100">
-                    <h4 class="card-header">個人獨享餐</h4>
-                    <img src="img/01.jpg" width="348px" height="320">
+                    <h4 class="card-header">花生培根咔啦雞腿堡XL套餐</h4>
+                    <img src="img/個人/花生培根咔啦雞腿堡XL套餐.jpg" width="348px" height="320">
                     <div class="card-footer">
-                        <a href="" class="btn btn-primary">Learn More</a>
+                        <a href="http://localhost:8000/products/26" class="btn btn-primary">前往訂購</a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 mb-4">
                 <div class="card h-100">
-                    <h4 class="card-header">多人分享餐</h4>
-                    <img src="img/07.jpg" width="348px" height="320">
+                    <h4 class="card-header">開燻雙拼餐</h4>
+                    <img src="img//多人/開燻雙拼餐.jpg" width="348px" height="320">
                     <div class="card-footer">
-                        <a href="" class="btn btn-primary">Learn More</a>
+                        <a href="http://localhost:8000/products/21" class="btn btn-primary">前往訂購</a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 mb-4">
                 <div class="card h-100">
-                    <h4 class="card-header">單點</h4>
-                    <img src="img/04.jpg" width="348px" height="320">
+                    <h4 class="card-header">原味蛋撻禮盒</h4>
+                    <img src="img/單點/原味蛋撻禮盒.jpg" width="348px" height="320">
                     <div class="card-footer">
-                        <a href="" class="btn btn-primary">Learn More</a>
+                        <a href="http://localhost:8000/products/12" class="btn btn-primary">前往訂購</a>
                     </div>
                 </div>
             </div>
