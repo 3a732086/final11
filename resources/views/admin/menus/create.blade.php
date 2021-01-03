@@ -62,7 +62,7 @@
                 <div class="form-group">
                     <label for="type">餐點類別：</label>
                     <select name="type" id="type">
-                        <option value="單人餐">單人餐</option>
+                        <option value="單人餐">個人餐</option>
                         <option value="多人餐">多人餐</option>
                         <option value="單點">單點</option>
                     </select>
