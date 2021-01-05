@@ -96,18 +96,50 @@
 
 ## 額外使用的套件或樣板
 
-- 前台樣板：Modern Business (作為前台頁面使用)
+- 前台樣板：[Modern Business](https://startbootstrap.com/template/modern-business) 
 
-- 後台樣板：Side Bar (作為後台管理使用)
+        作為前台頁面使用，畫面簡單乾淨
+
+- 後台樣板：[Side Bar](https://startbootstrap.com/template/simple-sidebar) 
+
+        作為後台管理使用，介面清楚明瞭，方便操作
+        
 
 ## 系統測試資料存放位置
-
-
+    
+    - final11底下的sql資料夾
 
 ## 系統使用者測試帳號
 
-- 帳號：admin
-- 密碼：12345678
+★ 前台
+
+    - 帳號：aaa123123
+    - 密碼：aaa123123
+    
+★ 後台
+
+    - 帳號：admin
+    - 密碼：12345678
 
 
 ## 系統開發人員與工作分配
+
+    [3A732086 胡東霖](https://github.com/3A732086)
+    
+        - 前台管理
+        - 初始專案
+        - DB 
+        - readme 撰寫
+        - 登入後判斷身分別進入前台或後台
+        - 登入頁面修改
+        - 個人資料頁面修改
+        - 期中報告製作
+
+    
+    [3A732087 許家銓](https://github.com/3A732087)
+    
+        - 後台管理
+        - 前台購物車及訂單查詢
+        - DB
+        - 期中報告製作
+        
