@@ -18,6 +18,7 @@ class AdminOrderlistController extends Controller
             ->join('users','orderlists.users_id','users.id')
             ->select('orderdetails.orderlists_id','users_id',DB::raw('group_concat(products.name," / ",quantity )as name'), 'orderlists.total','orderlists.method', 'orderlists.status','orderdetails.created_at' )
             ->groupBy('orderlists_id','created_at')
+            ->orderBy('orderlists.status','DESC')
             ->paginate(10);
         //$orderlists = Orderlist::orderBy('created_at','ASC')->paginate(10);
         $data = [
