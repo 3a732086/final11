@@ -30,7 +30,7 @@
 
     <div class="row">
         <div class="col-lg-12">
-            <form action="/admin/menus/store" method="POST" role="form">
+            <form action="/admin/menus/store" enctype="multipart/form-data"  method="POST" role="form">
                 @method("POST")
                 @csrf
 
@@ -46,12 +46,12 @@
 
                 <div class="form-group">
                     <label for="img">圖片位置(大)：</label>
-                    <input id="img" name="img" class="form-control" >
+                    <input type = "file" id="img" name="img" class="form-control" >
                 </div>
 
                 <div class="form-group">
                     <label for="img2">圖片位置(小)：</label>
-                    <input id="img2" name="img2" class="form-control" >
+                    <input type = "file" id="img2" name="img2" class="form-control" >
                 </div>
 
                 <div class="form-group">
