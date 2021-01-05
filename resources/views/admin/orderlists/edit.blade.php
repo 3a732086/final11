@@ -63,7 +63,6 @@
                         <select name="status" id="status">{{old('status',$ordlis->status)}}
                             <option value="準備中">準備中</option>
                             <option value="已完成">已完成</option>
-                            <option value="已取消">已取消</option>
                         </select>
 
                     </div>
