@@ -51,8 +51,15 @@
 ## 系統的主要功能
 ★ 前台
   - 首頁 (Route::get('/',[HomeController::class, 'index'])->name('home.index');)  [3A732086 胡東霖](https://github.com/3A732086)
+  - 菜單瀏覽 (Route::get('/products', [ProductController::class, 'index'])->name('products.index');) [3A732086 胡東霖](https://github.com/3A732086)
+  - 個別餐點資訊 (Route::get('/products/{product}', [ProductController::class, 'show'])->name('products.show');) [3A732086 胡東霖](https://github.com/3A732086)
+  - 購物車 (Route::get('/cartlist',[CartController::class,'index'])->middleware('auth')->name('carts.index'); ) [3A732086 胡東霖](https://github.com/3A732086) [3A732087 許家銓](https://github.com/3A732087)
+  - 訂單查詢 (Route::get('/orderlists',[OrderController::class,'index'])->middleware('auth')->name('orders.index');) [3A732086 胡東霖](https://github.com/3A732086) [3A732087 許家銓](https://github.com/3A732087)
 
-
+★ 後台
+  - 會員管理 (Route::get('members', [AdminMemberController::class, 'index'])->name('admin.members.index');) [3A732087 許家銓](https://github.com/3A732087)
+  - 餐點管理 (Route::get('menus', [AdminMenuController::class, 'index'])->name('admin.menus.index');) [3A732087 許家銓](https://github.com/3A732087)
+  - 訂單管理 (Route::get('orderlists', [AdminOrderlistController::class, 'index'])->name('admin.orderlists.index'); ) [3A732087 許家銓](https://github.com/3A732087)
 ### Premium Partners
 
 - **[Vehikl](https://vehikl.com/)**
