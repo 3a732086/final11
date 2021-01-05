@@ -71,30 +71,43 @@
 
 ## 實際資料表欄位設計
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/)**
-- **[OP.GG](https://op.gg)**
+- 使用者 (users)資料表
+<a href="https://imgur.com/TFdhtSS"><img src="https://i.imgur.com/TFdhtSS.png" title="source: imgur.com" /></a>
 
-## Contributing
+- 產品 (product)資料表
+<a href="https://imgur.com/y5ydQrM"><img src="https://i.imgur.com/y5ydQrM.png" title="source: imgur.com" /></a>
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+- 購物車 (carts)資料表
+<a href="https://imgur.com/OVpJgWw"><img src="https://i.imgur.com/OVpJgWw.png" title="source: imgur.com" /></a>
 
-## Code of Conduct
+- 訂單主檔 (orderlists)資料表
+<a href="https://imgur.com/gtqYIdm"><img src="https://i.imgur.com/gtqYIdm.png" title="source: imgur.com" /></a>
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+- 訂單明細 (orderdetails)資料表
+<a href="https://imgur.com/HQMy2dz"><img src="https://i.imgur.com/HQMy2dz.png" title="source: imgur.com" /></a>
 
-## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## 初始專案與DB負責的同學 
 
-## License
+- 初始專案 [3A732086 胡東霖](https://github.com/3A732086) 
+- DB [3A732086 胡東霖](https://github.com/3A732086) 、 [3A732087 許家銓](https://github.com/3A732087)
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+## 額外使用的套件或樣板
+
+- 前台樣板：Modern Business (作為前台頁面使用)
+
+- 後台樣板：Side Bar (作為後台管理使用)
+
+## 系統測試資料存放位置
+
+
+
+## 系統使用者測試帳號
+
+- 帳號：admin
+- 密碼：12345678
+
+
+## 系統開發人員與工作分配
