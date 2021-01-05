@@ -40,15 +40,18 @@
 
 
 
-## Learning Laravel
+## 系統名稱及作用
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+線上預訂快取系統
+    - 讓使用者可以不必至店家現場排隊點餐，節省時間
+    - 詳細的餐點資訊
+    - 店家可使用這套系統管理會員、餐點及訂單
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
+## 系統的主要功能
+★ 前台
+  - 首頁 (Route::get('/',[HomeController::class, 'index'])->name('home.index');)  [3A732086 胡東霖](https://github.com/3A732086)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
 ### Premium Partners
 
