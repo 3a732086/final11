@@ -108,7 +108,7 @@
 
         作為前台頁面使用，畫面簡單乾淨
 
-- 後台樣板：[Side Bar](https://startbootstrap.com/template/simple-sidebar) 
+- 後台樣板：[Sidebar](https://startbootstrap.com/template/simple-sidebar) 
 
         作為後台管理使用，介面清楚明瞭，方便操作
         
@@ -134,20 +134,20 @@
 
    [3A732086 胡東霖](https://github.com/3A732086)
     
-         前台管理
-         初始專案
-         DB 
-         readme 撰寫
-         登入後判斷身分別進入前台或後台
-         登入頁面修改
-         個人資料頁面修改
-         期中報告製作
+      前台管理
+      初始專案
+      DB 
+      readme 撰寫
+      登入後判斷身分別進入前台或後台
+      登入頁面修改
+      個人資料頁面修改
+      期中報告製作
 
     
    [3A732087 許家銓](https://github.com/3A732087)
-    
-         後台管理
-         前台購物車及訂單查詢
-         DB
-         期中報告製作
+   
+      後台管理
+      前台購物車及訂單查詢
+      DB
+      期中報告製作
         
