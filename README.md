@@ -53,14 +53,23 @@
   - 首頁 (Route::get('/',[HomeController::class, 'index'])->name('home.index');)  [3A732086 胡東霖](https://github.com/3A732086)
   - 菜單瀏覽 (Route::get('/products', [ProductController::class, 'index'])->name('products.index');) [3A732086 胡東霖](https://github.com/3A732086)
   - 個別餐點資訊 (Route::get('/products/{product}', [ProductController::class, 'show'])->name('products.show');) [3A732086 胡東霖](https://github.com/3A732086)
-  - 購物車 (Route::get('/cartlist',[CartController::class,'index'])->middleware('auth')->name('carts.index'); ) [3A732086 胡東霖](https://github.com/3A732086) [3A732087 許家銓](https://github.com/3A732087)
-  - 訂單查詢 (Route::get('/orderlists',[OrderController::class,'index'])->middleware('auth')->name('orders.index');) [3A732086 胡東霖](https://github.com/3A732086) [3A732087 許家銓](https://github.com/3A732087)
+  - 購物車 (Route::get('/cartlist',[CartController::class,'index'])->middleware('auth')->name('carts.index'); ) [3A732086 胡東霖](https://github.com/3A732086) 、 [3A732087 許家銓](https://github.com/3A732087)
+  - 訂單查詢 (Route::get('/orderlists',[OrderController::class,'index'])->middleware('auth')->name('orders.index');) [3A732086 胡東霖](https://github.com/3A732086) 、 [3A732087 許家銓](https://github.com/3A732087)
 
 ★ 後台
   - 會員管理 (Route::get('members', [AdminMemberController::class, 'index'])->name('admin.members.index');) [3A732087 許家銓](https://github.com/3A732087)
   - 餐點管理 (Route::get('menus', [AdminMenuController::class, 'index'])->name('admin.menus.index');) [3A732087 許家銓](https://github.com/3A732087)
   - 訂單管理 (Route::get('orderlists', [AdminOrderlistController::class, 'index'])->name('admin.orderlists.index'); ) [3A732087 許家銓](https://github.com/3A732087)
-### Premium Partners
+  
+## ERD
+<a href="https://imgur.com/Upvdt9v"><img src="https://i.imgur.com/Upvdt9v.png" title="source: imgur.com" /></a>
+
+
+## 關聯式綱要圖
+<a href="https://imgur.com/9PG1V0k"><img src="https://i.imgur.com/9PG1V0k.png" title="source: imgur.com" /></a>
+
+
+## 實際資料表欄位設計
 
 - **[Vehikl](https://vehikl.com/)**
 - **[Tighten Co.](https://tighten.co)**
