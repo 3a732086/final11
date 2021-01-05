@@ -6,37 +6,37 @@
 
 ## ◆菜單瀏覽
 - 所有餐點之瀏覽，顯示價錢及餐點種類
-https://imgur.com/OshmB6x
+<a href="https://imgur.com/OshmB6x"><img src="https://i.imgur.com/OshmB6x.png" title="source: imgur.com" /></a>
 
 ## ◆個別菜單頁面(訂餐頁面)
 - 訂購餐點之頁面，可選擇餐點數量
-https://imgur.com/OMYdE2F
+<a href="https://imgur.com/OMYdE2F"><img src="https://i.imgur.com/OMYdE2F.png" title="source: imgur.com" /></a>
 
 ## ◆購物車
 - 欲訂購之餐點會先加入至購物車內，並顯示小計與總計，也可選擇繼續購物
-https://imgur.com/l0U2IRR
+<a href="https://imgur.com/l0U2IRR"><img src="https://i.imgur.com/l0U2IRR.png" title="source: imgur.com" /></a>
 
 ## ◆會員訂單查詢
 - 可查詢該會員的訂單，包含歷史訂單
-https://imgur.com/msKOMpN
+<a href="https://imgur.com/msKOMpN"><img src="https://i.imgur.com/msKOMpN.png" title="source: imgur.com" /></a>
 
 ## ◆會員個人資料修改
 - 提供會員修改個人資料
-https://imgur.com/e3HUEkS
+<a href="https://imgur.com/e3HUEkS"><img src="https://i.imgur.com/e3HUEkS.png" title="source: imgur.com" /></a>
 
 
 
 ## ◆後台會員管理
 - 查看所有會員，可檢視該會員的資料
-https://imgur.com/Pz1cLax
+<a href="https://imgur.com/Pz1cLax"><img src="https://i.imgur.com/Pz1cLax.png" title="source: imgur.com" /></a>
 
 ## ◆後台餐點管理
 - 查看所有餐點，可新增餐點
-https://imgur.com/DFs3TZx
+<a href="https://imgur.com/DFs3TZx"><img src="https://i.imgur.com/DFs3TZx.png" title="source: imgur.com" /></a>
 
 ## ◆後台訂單管理
 - 查看所有訂單，包含已完成及準備中之訂單
-[img]https://i.imgur.com/XvCa31d.png[/img]
+<a href="https://imgur.com/XvCa31d"><img src="https://i.imgur.com/XvCa31d.png" title="source: imgur.com" /></a>
 
 
 
