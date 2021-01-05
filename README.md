@@ -2,7 +2,7 @@
 
 ## ◆首頁
 - 餐點及活動圖片幻燈片、推薦餐點、及註冊會員與登入
-https://imgur.com/r0Vfet3
+![image] https://imgur.com/r0Vfet3
 
 ## ◆菜單瀏覽
 - 所有餐點之瀏覽，顯示價錢及餐點種類
