@@ -36,7 +36,7 @@ https://imgur.com/DFs3TZx
 
 ## ◆後台訂單管理
 - 查看所有訂單，包含已完成及準備中之訂單
-[Imgur](https://i.imgur.com/XvCa31d.png)
+[img]https://i.imgur.com/XvCa31d.png[/img]
 
 
 
