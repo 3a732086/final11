@@ -7,19 +7,47 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+# 系統畫面
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+##首頁
+- 餐點及活動圖片幻燈片、推薦餐點、及註冊會員與登入
+https://imgur.com/r0Vfet3
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+##菜單瀏覽
+- 所有餐點之瀏覽，顯示價錢及餐點種類
+https://imgur.com/OshmB6x
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+##個別菜單頁面(訂餐頁面)
+- 訂購餐點之頁面，可選擇餐點數量
+https://imgur.com/OMYdE2F
+
+##購物車
+- 欲訂購之餐點會先加入至購物車內，並顯示小計與總計，也可選擇繼續購物
+https://imgur.com/l0U2IRR
+
+##會員訂單查詢
+- 可查詢該會員的訂單，包含歷史訂單
+https://imgur.com/msKOMpN
+
+##會員個人資料修改
+- 提供會員修改個人資料
+https://imgur.com/e3HUEkS
+
+
+
+##後台會員管理
+- 查看所有會員，可檢視該會員的資料
+https://imgur.com/Pz1cLax
+
+##後台餐點管理
+- 查看所有餐點，可新增餐點
+https://imgur.com/DFs3TZx
+
+##後台訂單管理
+- 查看所有訂單，包含已完成及準備中之訂單
+https://imgur.com/XvCa31d
+
+
 
 ## Learning Laravel
 
