@@ -38,6 +38,7 @@
                         <th  style="text-align: center">email</th>
                         <th  style="text-align: center">住址</th>
                         <th  style="text-align: center">手機</th>
+                        <th  style="text-align: center">身分別</th>
                         <th style="text-align: center">功能</th>
                     </tr>
                     </thead>
@@ -51,6 +52,7 @@
                             <td style="text-align: center">{{$user->email}}</td>
                             <td style="text-align: center">{{$user->address}}</td>
                             <td style="text-align: center">{{$user->telephone}}</td>
+                            <td style="text-align: center">{{$user->type}}</td>
                             <td>
                                 <a class="btn btn-sm btn-primary" href="{{ route('admin.members.edit', $user->id) }}">編輯</a>
                                 /

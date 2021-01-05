@@ -17,9 +17,15 @@
         <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> {{Auth::user()->name}} <b class="caret"></b></a>
             <ul class="dropdown-menu">
+
+                <li>
+                    <a href="{{ route('home.index') }}"><i class="fa fa-fw fa-user"></i> 返回前端</a>
+                </li>
                 <li>
                     <a href="{{ route('profile.show') }}"><i class="fa fa-fw fa-user"></i> Profile</a>
                 </li>
+
+
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
                 <li class="divider"></li>
